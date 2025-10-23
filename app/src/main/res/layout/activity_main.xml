@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3DEE8"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Título del juego -->
+
+        <!-- Configuración del juego -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="🐖 PIG GAMES"
+            android:textColor="#D7E48BF3"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/configTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Configuración:"
+            android:textColor="#333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Número de jugadores -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Jugadores:"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/playersSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp" />
+
+        <!-- Número de rondas -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Tipo Partida"
+            android:textColor="#333"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/roundsSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:padding="8dp" />
+
+        <!-- Botón de empezar -->
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#453545"
+            android:hapticFeedbackEnabled="false"
+            android:text="COMENZAR"
+            android:textColor="#FDFDFD"
+            android:textColorLink="#CF1515"
+            android:textSize="14sp"
+            app:cornerRadius="10dp" />
+
+        <!-- Información del juego -->
+        <TextView
+            android:id="@+id/roundInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#FFF"
+            android:padding="8dp"
+            android:text="Ronda: 1/2"
+            android:textColor="#666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/playerInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#FFF"
+            android:padding="8dp"
+            android:text="Jugador: 1"
+            android:textColor="#666"
+            android:textSize="14sp" />
+
+        <!-- Área del dado -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="🎲 Tu DADO Favorito"
+            android:textColor="#673AB7"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/diceImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:background="#FFF"
+            android:src="@drawable/dado1" />
+
+        <TextView
+            android:id="@+id/turnScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Puntos del turno: 0"
+            android:textColor="#666"
+            android:textSize="14sp" />
+
+        <!-- Botones de juego -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/rollButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:text="🎲 LANZAR"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/holdButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:text="✋ MANTENER"
+                android:textColor="#FFF"
+                android:textSize="14sp"
+                app:cornerRadius="10dp" />
+
+        </LinearLayout>
+
+        <!-- Estado del juego -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Puntuaciones:"
+            android:textColor="#333"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/gameStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="#E8F5E8"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="¡Configura el juego y presiona COMENZAR para jugar!"
+            android:textColor="#666"
+            android:textSize="12sp" />
+
+        <!-- Reglas -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F5F5"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="! Reglas: Tira el dado y acumula puntos. Si sacas 1, pierdes todo."
+            android:textColor="#666"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+</ScrollView>
