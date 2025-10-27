@@ -110,12 +110,10 @@ class MainActivity : AppCompatActivity() {
         val jugador = jugadores[jugadorActualIndex]
 
         if (numero == 1) {
-            cambiarTurno()
             jugador.puntosTurno = 0
             cambiarTurno()
             binding.gameStatusText.text = "¡${jugador.nombre} sacó 1! Pierde los puntos del turno."
             actualizarUI()
-            cambiarTurno()
         } else {
             jugador.puntosTurno += numero
             binding.gameStatusText.text = "¡${jugador.nombre} sacó $numero! Ahora tiene ${jugador.puntosTurno} puntos en este turno."
@@ -142,7 +140,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             binding.gameStatusText.text = "Tira el dado primero."
         }
-
         actualizarUI()
     }
 
