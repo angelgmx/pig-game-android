@@ -11,19 +11,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pigg">
+
+        <!-- Actividad de Configuración (Ahora es la actividad de inicio) -->
         <activity
-            android:name=".SplashActivity"
-            android:exported="true"
-            android:theme="@style/SplashTheme">
+            android:name=".ConfigActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Actividad para Elegir Jugadores -->
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:name=".ElegirJugadores"
+            android:exported="false" />
+
+        <!-- Actividad del Juego -->
+        <activity
+            android:name=".JuegoActivity"
+            android:exported="false" />
+
+        <!-- Actividad del Juego -->
+        <activity
+            android:name=".ResultadosActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>

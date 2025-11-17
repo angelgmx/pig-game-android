@@ -6,13 +6,4 @@
     </style>
 
     <style name="Theme.Pigg" parent="Base.Theme.Pigg" />
-
-
-    <!-- Splash Screen Theme -->
-    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">#00D84315</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-    </style>
 </resources>
